@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var port = process.env.PORT || 3000;
 
 var MongoClient = require('mongodb').MongoClient;
 var url = `mongodb://${process.env.BNK_MONGO_USERNAME}:${process.env.BNK_MONGO_PASSWORD}@${process.env.BNK_MONGO_HOST}:${process.env.BNK_MONGO_PORT}/${process.env.BNK_MONGO_DB_NAME}`;
@@ -21,4 +22,4 @@ app.get('/', (req, res) => {
   });
 })
 
-app.listen(3000, () => console.log('Example app listening on PORT 3000!'))
+app.listen(port, () => console.log('Example app listening on PORT 3000!'))
