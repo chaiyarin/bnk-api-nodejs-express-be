@@ -1,3 +1,9 @@
 var mongoose = require('./mongoose');
-var schema = new mongoose.Schema({ name: 'string', address: 'string' });
-module.exports = mongoose.model('members', schema);;
+var schema = new mongoose.Schema(
+    {
+        name: 'string',
+        imgUrl: 'string',
+        instagramId: 'string'
+    }
+);
+module.exports = mongoose.model('members', schema);
