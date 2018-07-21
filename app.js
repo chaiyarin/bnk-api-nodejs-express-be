@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
+const jsonWebToken = require('jsonwebtoken');
 app.use(cors());
 app.use(bodyParser.json());
 require('./routing')(app);
